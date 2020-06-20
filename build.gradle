@@ -19,10 +19,16 @@ repositories {
 }
 
 dependencies {
+	compile group: 'io.jsonwebtoken', name: 'jjwt', version: '0.5.1'
+	compile group: 'org.webjars', name: 'bootstrap', version: '4.3.1'
+	compile group: 'org.webjars', name: 'webjars-locator-core', version: '0.43'
+	compile group: 'javax.validation', name: 'validation-api', version: '2.0.0.Final'
+	compile group: 'org.webjars', name: 'jquery', version: '3.3.1'
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	implementation 'org.springframework.boot:spring-boot-starter-security'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.postgresql:postgresql'
+	implementation 'org.springframework.security:spring-security-oauth2-client'
 	compileOnly 'org.projectlombok:lombok'
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation('org.springframework.boot:spring-boot-starter-test') {

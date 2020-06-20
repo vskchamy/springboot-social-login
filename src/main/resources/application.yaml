@@ -3,3 +3,19 @@ spring:
     url: jdbc:postgresql://localhost:5432/social_login
     username: postgres
     password: admin
+
+  security:
+    oauth2:
+      client:
+        registration:
+          github:
+            clientId: c6528848244ab0fc133d
+            clientSecret: 250b7fca6dc796eb50ce68b722fff8aa1b5da65e
+            redirectUri: "{baseUrl}/login/oauth2/code/{registrationId}"
+app:
+  auth:
+    tokenSecret: 926D96C90030DD58429D2751AC1BDBBC
+    tokenExpirationMilliSec: 864000000
+  oauth2:
+    authorizedRedirectUris:
+      - http://localhost:3000/oauth2/redirect
